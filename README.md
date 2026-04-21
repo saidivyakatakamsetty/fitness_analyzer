@@ -1,54 +1,15 @@
-# 🧠 AI Fitness Form Analyzer (Real-Time Computer Vision Trainer)
+# AI Fitness Form Analyzer
 
-A real-time AI-powered fitness system that analyzes human body posture using a webcam and provides instant feedback on exercise form.
+This is a real-time AI fitness tracking project that uses computer vision to detect and analyze human exercise movements using a webcam.
 
-This project uses **computer vision (MediaPipe + OpenCV)** to detect body landmarks and track exercises like squats, pushups, and lunges.
+## Features
+- Real-time pose detection using webcam
+- Supports squats, pushups, and lunges
+- Automatic rep counting
+- Workout tracking saved to CSV file
+- Simple dashboard to view progress
 
----
-
-## 🚀 Demo Overview
-
-- Detects human pose in real time
-- Tracks exercise movements
-- Counts repetitions automatically
-- Provides live feedback on form
-- Logs workout history for progress tracking
-- Visual dashboard for performance analytics
-
----
-
-## 🏋️ Supported Exercises
-
-- Squats
-- Pushups
-- Lunges
-
----
-
-## 🧠 Key Features
-
-### 🎯 Real-Time Pose Detection
-Uses MediaPipe to detect 33 human body landmarks from webcam input.
-
-### 🔢 Automatic Rep Counter
-Detects movement cycles and counts completed reps accurately.
-
-### 📊 Workout Tracking System
-Stores workout data in CSV format for progress analysis.
-
-### 📈 Performance Dashboard
-Visualizes workout history using graphs for progress tracking.
-
-### 🔧 Modular Architecture
-Clean separation of logic:
-- `main.py` → AI runtime system
-- `utils.py` → mathematical logic (angles)
-- `tracker.py` → workout logging system
-
----
-
-## 🛠 Tech Stack
-
+## Tech Stack
 - Python
 - OpenCV
 - MediaPipe
@@ -56,6 +17,41 @@ Clean separation of logic:
 - Pandas
 - Matplotlib
 
----
+## Project Structure
+Fitness_Analyzer/
+│
+├── main.py
+├── utils.py
+├── tracker.py
+├── dashboard.py
+│
+├── data/
+│ └── workouts.csv
 
-## 📁 Project Structure
+## How to Run
+
+### Install dependencies
+
+pip install opencv-python mediapipe numpy pandas matplotlib
+
+
+### Run main program
+
+python main.py
+
+
+### Run dashboard
+
+python dashboard.py
+
+
+## Controls
+- S → Start tracking
+- P → Pause tracking
+- Q → Quit
+- 1 → Squats
+- 2 → Pushups
+- 3 → Lunges
+
+## Goal
+To build a simple AI system that can track fitness exercises and count repetitions using computer vision.
